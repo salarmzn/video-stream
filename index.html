@@ -1,9 +1,30 @@
 <!DOCTYPE html> 
 <html> 
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+function appendVideo() {
+  var videoSrc = $("#VideoSrc").val();        // Create text with HTML
+ 
+  var video = $('<video />', {
+    id: 'video',
+    src: videoSrc,
+    type: 'video/mp4',
+    controls: true
+});
+video.appendTo($('body'));
+  
+}
+</script>
+</head>
 <body> 
 
-<video src="http://s3.tinydl.info/Series/41f34ba280282bce0419078461f2b92f/01/BluRay%20720p/Peaky_Blinders_S01E01_720p_BluRay_TINYMZ.mkv"   controls>
-</video>
+
+Please Enter Video Download link in TextBox : <br>
+<input type="text" name="VideoSrc" id="VideoSrc" /><br />
+
+<button onclick="appendVideo()">Display Video</button>
+
 
 
 
